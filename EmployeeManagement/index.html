@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  .addEmployeeForm {
+    padding: 20px;
+    margin: 20px auto;
+    width: 300px;
+  }
+  .addEmployeeForm input {
+    width: 280px;
+    margin: 10px;
+    padding: 8px 15px;
+    font-size: 18px;
+  }
+  .addEmployeeForm button {
+    padding: 15px;
+    font-size: 18px;
+    margin: 10px auto;
+  }
+  table {
+    width: 80%;
+    margin: 20px 10%;
+    border: 1px solid black;
+  }
+  table tr th{
+    text-align: left;
+    background: teal;
+    color: white;
+    padding: 4px 10px;
+    border: 0;
+    cell-spacing: 0;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Employee Records </h1>
+    <div id="employeeList"></div>
+    <div id="addEmployee">
+      <div class="addEmployeeForm">
+        <div>
+          <input type="text" name="firstname" placeholder="Enter Firstname" id="firstname" onchange="addEmployee('firstname', this.value)" />
+        </div>
+        <div>
+          <input type="text" name="lastname" placeholder="Enter Lastname"  id="lastname" onchange="addEmployee('lastname', this.value)" />
+        </div>
+        <div>
+          <input type="text" name="email" placeholder="Enter Email"  id="email" onchange="addEmployee('email', this.value)" />
+        </div>
+        <div>
+          <input type="number" min="18" max="60" placeholder="Enter Age"  name="age" id="age" onchange="addEmployee('age', this.value)" />
+        </div>
+        <div>
+          <button onclick="addEmployee('submit', '')">Add Employee</button>
+        </div>
+      </div>
+    </div>
+    <div id="deleteEmployee"></div>
+    <div id="updateEmployee"></div>
+
+  </div>
+  <script src="../scripts/common.js"></script>
+  <script src="./js/addEmployee.js"></script>
+  <script src="./js/deleteEmployee.js"></script>
+  <script src="./js/updateEmployee.js"></script>
+</body>
+
+</html>
