@@ -7,6 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
+    h1 {
+      width: 80%;
+      margin: 10px auto;
+      background-color: black;
+      color: white;
+      padding: 8px 20px
+    }
   .addEmployeeForm {
     padding: 20px;
     margin: 20px auto;
@@ -29,19 +36,21 @@
     border: 1px solid black;
   }
   table tr th{
-    text-align: left;
     background: teal;
     color: white;
     padding: 4px 10px;
     border: 0;
-    cell-spacing: 0;
+    cellspacing: 0;
+  }
+  table tr td {
+    text-align: center;
   }
   </style>
 </head>
 
 <body>
   <div class="container">
-    <h1>Employee Records </h1>
+    <h1>Employee Records <span id="empCount"> </span></h1>
     <div id="employeeList"></div>
     <div id="addEmployee">
       <div class="addEmployeeForm">
@@ -58,7 +67,8 @@
           <input type="number" min="18" max="60" placeholder="Enter Age"  name="age" id="age" onchange="addEmployee('age', this.value)" />
         </div>
         <div>
-          <button onclick="addEmployee('submit', '')">Add Employee</button>
+          <button onclick="addEmployee('submit', '')" id="add">Add Employee</button>
+          <button onclick="addEmployee('update', '')" id="update">Edit Employee</button>
         </div>
       </div>
     </div>
